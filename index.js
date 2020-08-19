@@ -22,11 +22,6 @@ app.all('*', function(req, res, next) {
 
 const sendMail = async (text, email, subject, message) => {
     try {
-        console.log(typeof email);
-        console.log(subject);
-        console.log(message);
-
-
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
